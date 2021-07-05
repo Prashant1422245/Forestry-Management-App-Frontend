@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/admin']" style="font-weight: 700;">
+      <i>Forestry Management App</i>
+    </a>
+  </div>
+</nav>
+<br>
+
+
+
+<h2>Land Records </h2><br>
+  <button [routerLink]="['/add-land']" class="btn btn-primary" type="submit">Add New Land</button><br><br>
+  <table class="table">
+    <thead>
+      <tr class="table-dark">
+        <th>landId</th>
+        <th>surveyNumber</th>
+        <th>ownerName</th>
+        <th>landArea</th>
+        <th>
+          Edit
+        </th>
+        <th>
+          Remove
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let land of lands">
+        <td>{{land.landId}}</td>
+        <td>{{land.surveyNumber}}</td>
+        <td>{{land.ownerName}}</td>
+        <td>{{land.landArea}}</td>
+        <td><button (click)="updateLand(land.surveyNumber)" class="btn btn-warning" type="submit">Update</button></td>
+        <td><button (click)="deleteLand(land.surveyNumber)" class="btn btn-danger" type="submit">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
