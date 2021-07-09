@@ -20,6 +20,12 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ViewCustomerComponent } from './view-customer/view-customer.component';
 import { RegisterCustomerComponent } from './register-customer/register-customer.component';
+import { OrderComponent } from './order/order.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AdminRegistrationComponent } from './admin-registration/admin-registration.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +45,13 @@ import { RegisterCustomerComponent } from './register-customer/register-customer
     CustomerListComponent,
     AddCustomerComponent,
     ViewCustomerComponent,
-    RegisterCustomerComponent
+    RegisterCustomerComponent,
+    OrderComponent,
+    RegistrationComponent,
+    LoginComponent,
+    LogoutComponent,
+    AdminRegistrationComponent,
+    AdminLoginComponent
 
   ],
   imports: [

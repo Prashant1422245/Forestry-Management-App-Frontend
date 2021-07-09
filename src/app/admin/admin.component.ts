@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   itemImageUrl = '../assets/1.jfif';
@@ -15,5 +16,8 @@ export class AdminComponent implements OnInit {
   itemImageUrl3 = '../assets/1.jpg';
   ngOnInit(): void {
   }
+  logout() {
+    this.router.navigate(['/admin-login'])
+} 
 
 }

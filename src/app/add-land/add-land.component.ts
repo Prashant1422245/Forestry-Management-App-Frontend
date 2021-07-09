@@ -21,10 +21,10 @@ export class AddLandComponent implements OnInit {
   }
   onSubmit() {
     console.log('inside onsubmit method..')
-    this.saveProduct(this.addForm);
+    this.saveLand(this.addForm);
   }
 
-  saveProduct(addForm: NgForm) {
+  saveLand(addForm: NgForm) {
     this.landService.createLand(this.land).subscribe(data => { console.log(data);
      
       this.navigateToLand(); },
